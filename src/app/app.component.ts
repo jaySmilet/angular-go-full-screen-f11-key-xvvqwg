@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   elem;
 
   ngOnInit() {
-    this.elem = document.documentElement;
+    this.elem = document.getElementsByClassName('image');
   }
 
   openFullscreen() {
