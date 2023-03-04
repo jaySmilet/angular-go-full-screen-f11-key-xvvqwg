@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   }
 
   openFullscreen() {
+    console.log('ok');
     if (this.image.requestFullscreen) {
       this.image.requestFullscreen();
     } else if (this.image.mozRequestFullScreen) {
