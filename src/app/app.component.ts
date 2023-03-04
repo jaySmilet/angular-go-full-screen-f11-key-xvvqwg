@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -9,9 +9,10 @@ import { Component, Inject, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   constructor(@Inject(DOCUMENT) private document: any) {}
   elem;
+  @ViewChild('image') image;
 
   ngOnInit() {
-    this.elem = document.getElementsByClassName('image');
+    this.elem = document.documentElement;
   }
 
   openFullscreen() {
