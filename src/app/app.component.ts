@@ -16,17 +16,17 @@ export class AppComponent implements OnInit {
   }
 
   openFullscreen() {
-    if (this.elem.requestFullscreen) {
-      this.elem.requestFullscreen();
-    } else if (this.elem.mozRequestFullScreen) {
+    if (this.image.requestFullscreen) {
+      this.image.requestFullscreen();
+    } else if (this.image.mozRequestFullScreen) {
       /* Firefox */
-      this.elem.mozRequestFullScreen();
-    } else if (this.elem.webkitRequestFullscreen) {
+      this.image.mozRequestFullScreen();
+    } else if (this.image.webkitRequestFullscreen) {
       /* Chrome, Safari and Opera */
-      this.elem.webkitRequestFullscreen();
-    } else if (this.elem.msRequestFullscreen) {
+      this.image.webkitRequestFullscreen();
+    } else if (this.image.msRequestFullscreen) {
       /* IE/Edge */
-      this.elem.msRequestFullscreen();
+      this.image.msRequestFullscreen();
     }
   }
 
